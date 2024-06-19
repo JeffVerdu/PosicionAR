@@ -1,0 +1,19 @@
+@import url("../base/variables.css");
+
+.cardbox {
+  flex-shrink: 0;
+  width: 20rem;
+}
+
+.cardbox-image {
+  object-fit: cover;
+  height: 15rem;
+}
+
+.cardbox-button {
+  background-color: var(--secondaryColor);
+  transition: filter 0.3s;
+}
+.cardbox-button:hover {
+  filter: brightness(0.9);
+}

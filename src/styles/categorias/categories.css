@@ -1,0 +1,17 @@
+@import url("../base/variables.css");
+
+.categories {
+  background-color: var(--gray);
+}
+
+.categories-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+.categories-list p {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primaryColor);
+}
