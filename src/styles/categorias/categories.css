@@ -6,12 +6,36 @@
 
 .categories-list {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 4rem;
+  padding-bottom: 1rem;
+  overflow-x: scroll;
+  scrollbar-color: var(--white) transparent;
+}
+@media (min-width: 1024px) {
+  .categories-list {
+    overflow: hidden;
+    justify-content: center;
+  }
 }
 .categories-list p {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: var(--primaryColor);
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .categories-list p {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 1024px) {
+  .categories-list p {
+    font-size: 2rem;
+  }
+}
+.active-category {
+  background-color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
 }

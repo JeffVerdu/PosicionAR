@@ -1,26 +1,27 @@
 import Card from "react-bootstrap/Card";
-
 import "../../styles/common/cardbox.css";
 import { Button } from "./Button";
 
-export const CardBox = () => {
+interface Props {
+  id: string;
+  title: string;
+  description: string;
+  price: number;
+  image: string;
+}
+
+export const CardBox = (props: Props) => {
   return (
     <Card className="cardbox">
-      <Card.Img
-        variant="top"
-        src="https://vamosmendoza.com/wp-content/uploads/2018/08/990487_axdourldbaabcvta-1.jpg"
-        className="cardbox-image"
-      />
+      <Card.Img variant="top" src={props.image} className="cardbox-image" />
       <Card.Body>
-        <Card.Title className="cardbox-title">
-          Excursión al Manzano Histórico
-        </Card.Title>
-        <Card.Text className="cardbox-text">
-          Disfruta de un día espectacular, conociendo uno de los lugares más
-          emblemáticos de todo el Valle de Uco
-        </Card.Text>
-        <Button text="Más detalles" />
+        <Card.Title className="cardbox-title">{props.title}</Card.Title>
+        <Card.Text className="cardbox-text">{props.description}</Card.Text>
       </Card.Body>
+      <Card.Footer className="cardbox-footer">
+        <Card.Text className="cardbox-price">${props.price}</Card.Text>
+        <Button text="Más detalles" />
+      </Card.Footer>
     </Card>
   );
 };
