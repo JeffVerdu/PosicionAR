@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Category } from "../../types";
 import "../../styles/categorias/categories.css";
 import { CardBoxList } from "../articles/CardBoxList";
-import { articles } from "../../articles";
 
 export const Categories = () => {
   const [activeCategory, setActiveCategory] = useState("1");
