@@ -1,0 +1,25 @@
+.textoContacto-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .textoContacto-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+.textoContacto-grid p {
+  font-size: 2rem;
+}
+.textoContacto-grid img {
+  width: 30rem;
+  margin: 0 auto;
+}
+@media (min-width: 1024px) {
+  .textoContacto-grid img {
+    width: 40rem;
+  }
+}

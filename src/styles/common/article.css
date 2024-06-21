@@ -1,30 +1,31 @@
 @import url("../base/variables.css");
 
-.cardbox {
+.article {
   flex-shrink: 0;
   width: 20rem;
+  box-shadow: 1rem 1rem 1rem rgb(0 0 0 / 0.5);
 }
 
-.cardbox-image {
+.article-image {
   object-fit: cover;
   height: 15rem;
 }
 
-.cardbox-button {
+.article-button {
   background-color: var(--secondaryColor);
   transition: filter 0.3s;
 }
-.cardbox-button:hover {
+.article-button:hover {
   filter: brightness(0.9);
 }
 
-.cardbox-footer {
+.article-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.cardbox-price {
+.article-price {
   font-size: 1.8rem;
   font-weight: 700;
   color: var(--primaryColor);

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Category } from "../../types";
 import "../../styles/categorias/categories.css";
-import { CardBoxList } from "../articles/CardBoxList";
+import { ArticleList } from "../articles/ArticleList";
 
 export const Categories = () => {
   const [activeCategory, setActiveCategory] = useState("1");
@@ -22,6 +22,8 @@ export const Categories = () => {
   return (
     <section className="section-box categories">
       <div className="categories-content container-box">
+        <h2 className="section-title">Anuncios</h2>
+
         <div className="categories-list">
           {categories.map((category) => (
             <p
@@ -36,7 +38,7 @@ export const Categories = () => {
           ))}
         </div>
 
-        <CardBoxList id={activeCategory} />
+        <ArticleList id={activeCategory} />
       </div>
     </section>
   );

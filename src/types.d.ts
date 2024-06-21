@@ -3,7 +3,7 @@ export interface Category {
   name: string;
 }
 
-export interface Article {
+export interface Article_Type {
   id: string;
   title: string;
   description: string;

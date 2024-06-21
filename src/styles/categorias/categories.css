@@ -9,6 +9,7 @@
   align-items: center;
   gap: 4rem;
   padding-bottom: 1rem;
+  margin-bottom: 4rem;
   overflow-x: scroll;
   scrollbar-color: var(--white) transparent;
 }

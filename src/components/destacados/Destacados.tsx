@@ -1,5 +1,5 @@
 import "../../styles/destacados/destacados.css";
-import { CardBox } from "../common/CardBox";
+import { Article } from "../common/Article";
 import { articles } from "../../articles";
 
 export const Destacados = () => {
@@ -12,7 +12,7 @@ export const Destacados = () => {
 
         <div className="card-list">
           {destacadosArticles.map((article) => (
-            <CardBox
+            <Article
               key={article.id}
               id={article.id}
               title={article.title}

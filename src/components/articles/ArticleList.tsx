@@ -1,18 +1,18 @@
 import { articles } from "../../articles";
-import { CardBox } from "../common/CardBox";
+import { Article } from "../common/Article";
 import "../../styles/articles/cardBoxList.css";
 
 interface Props {
   id: string;
 }
 
-export const CardBoxList = ({ id }: Props) => {
+export const ArticleList = ({ id }: Props) => {
   return (
     <div className="article-list">
       {articles.map(
         (article) =>
           article.category.id === id && (
-            <CardBox
+            <Article
               key={article.id}
               id={article.id}
               title={article.title}
