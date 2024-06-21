@@ -1,0 +1,12 @@
+.article-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  justify-items: center;
+}
+@media (min-width: 768px) {
+  .article-list {
+    grid-template-columns: repeat(auto-fit, 200px);
+    justify-content: center;
+  }
+}

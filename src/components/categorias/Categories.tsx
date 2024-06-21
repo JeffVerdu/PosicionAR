@@ -21,10 +21,10 @@ export const Categories = () => {
 
   return (
     <section className="section-box categories">
-      <div className="categories-content container-box">
+      <div className="categories-content">
         <h2 className="section-title">Anuncios</h2>
 
-        <div className="categories-list">
+        <div className="categories-list container-box">
           {categories.map((category) => (
             <p
               key={category.id}

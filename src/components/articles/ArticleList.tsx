@@ -1,6 +1,6 @@
 import { articles } from "../../articles";
 import { Article } from "../common/Article";
-import "../../styles/articles/cardBoxList.css";
+import "../../styles/articles/articleList.css";
 
 interface Props {
   id: string;
