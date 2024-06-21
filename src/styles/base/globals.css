@@ -13,8 +13,13 @@
   font-weight: 900;
   color: var(--primaryColor);
   text-align: center;
-  border-bottom: 1px solid var(--primaryColor);
+  border-bottom: 2px solid var(--primaryColor);
   padding-bottom: 1rem;
   width: 50%;
   margin: 0 auto 4rem auto;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
 }
