@@ -10,7 +10,7 @@ export const Destacados = () => {
       <div className="destacados-content container-box">
         <h2 className="destacados-title">Destacados</h2>
 
-        <div className="card-list">
+        <div className="destacados-list">
           {destacadosArticles.map((article) => (
             <Article
               key={article.id}

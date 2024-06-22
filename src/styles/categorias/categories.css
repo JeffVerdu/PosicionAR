@@ -8,10 +8,10 @@
   display: flex;
   align-items: center;
   gap: 4rem;
-  padding-bottom: 1rem;
-  margin-bottom: 4rem;
+  padding-bottom: 0.5rem;
   overflow-x: scroll;
   scrollbar-color: var(--white) transparent;
+  scroll-behavior: smooth;
 }
 @media (min-width: 1024px) {
   .categories-list {
