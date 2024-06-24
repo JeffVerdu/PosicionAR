@@ -1,13 +1,16 @@
 import { Search } from "lucide-react";
 import "../../styles/navbar/navbar.css";
 import { Boton } from "../common/Boton";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   return (
     <header className="nav-bar container-box">
-      <h1 className="logo">
-        PosicionAR!<span>El que busca, encuentra</span>
-      </h1>
+      <Link to="/">
+        <h1 className="logo">
+          PosicionAR!<span>Si lo buscas, lo encuentras</span>
+        </h1>
+      </Link>
       <div className="navbar-item">
         <form className="search">
           <input placeholder="Ej: 'Excursiones'" type="text" required />
@@ -15,7 +18,9 @@ export const Navbar = () => {
             <Search color="#ffffff" />
           </button>
         </form>
-        <Boton text="Publicá con nosotros" />
+        <Link to="/contacto">
+          <Boton text="Publicá con nosotros" />
+        </Link>
       </div>
     </header>
   );

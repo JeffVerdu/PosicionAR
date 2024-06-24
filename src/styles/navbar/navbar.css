@@ -12,6 +12,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  transition: transform 0.3s ease-in-out;
+}
+.logo:hover {
+  transform: scale(1.1);
 }
 
 .logo {

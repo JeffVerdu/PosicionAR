@@ -22,12 +22,12 @@
 }
 
 .destacados-list {
+  padding: 0 1rem 2rem 1rem;
+  height: 32rem;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
   gap: 4rem;
   overflow-x: scroll;
-  padding-bottom: 2rem;
   scrollbar-color: rgb(185, 185, 185) transparent;
-  position: relative;
 }

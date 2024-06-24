@@ -1,5 +1,4 @@
 import "../../styles/contacto/contacto.css";
-import { ContactoMedios } from "./ContactoMedios";
 
 export const Contacto = () => {
   return (
@@ -10,14 +9,12 @@ export const Contacto = () => {
         <div className="textoContacto-grid">
           <p>
             Si estás interesado en publicar un anuncio para promocionar tu
-            negocio, no dudes en contactarnos a través de todos los medios que
-            tenemos disponibles para vos. Te brindaremos la mejor atención y
+            negocio, no dudes en contactarnos a través de cualquier medio de los
+            que tenemos disponibles para vos. Te brindaremos la mejor atención y
             asesoría.
           </p>
           <img src="/grafico.svg" alt="Gráfico" />
         </div>
-
-        <ContactoMedios />
       </div>
     </section>
   );

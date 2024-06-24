@@ -2,7 +2,7 @@ import "../../styles/contacto/contactoMedios.css";
 
 export const ContactoMedios = () => {
   return (
-    <div className="contacto-medios">
+    <div className="contacto-medios container-box">
       <div className="contacto-medio">
         <h3 className="contacto-title">Teléfonos</h3>
 

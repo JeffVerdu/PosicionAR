@@ -1,17 +1,17 @@
-import { Categorias } from "./components/categorias/Categorias";
-import { Destacados } from "./components/destacados/Destacados";
+import { Route, Routes } from "react-router-dom";
 import { Footer } from "./components/footer/Footer";
 import { Navbar } from "./components/navbar/Navbar";
-import { Secciones } from "./components/secciones/Secciones";
+import { Main } from "./routes/Main";
+import { Contacto } from "./components/contacto/Contacto";
 
 function App() {
   return (
     <>
       <Navbar />
-      <Categorias />
-      <Destacados />
-      <h2 className="section-title">Anuncios</h2>
-      <Secciones />
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/contacto" element={<Contacto />} />
+      </Routes>
       <Footer />
     </>
   );

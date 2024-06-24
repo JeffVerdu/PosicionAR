@@ -19,6 +19,10 @@
   margin: 0 auto;
 }
 @media (min-width: 1024px) {
+  .textoContacto-grid p {
+    text-align: right;
+  }
+
   .textoContacto-grid img {
     width: 40rem;
   }
