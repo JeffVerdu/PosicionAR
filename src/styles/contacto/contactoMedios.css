@@ -1,5 +1,4 @@
 .contacto-medios {
-  margin-top: 5rem;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -13,7 +12,7 @@
 
 .contacto-title {
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .contacto-items {
@@ -48,6 +47,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-weight: 500;
 }
 @media (min-width: 768px) {
   .contacto-link {

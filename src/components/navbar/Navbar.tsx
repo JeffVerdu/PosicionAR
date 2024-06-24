@@ -1,6 +1,6 @@
 import { Search } from "lucide-react";
 import "../../styles/navbar/navbar.css";
-import { Button } from "../common/Button";
+import { Boton } from "../common/Boton";
 
 export const Navbar = () => {
   return (
@@ -15,7 +15,7 @@ export const Navbar = () => {
             <Search color="#ffffff" />
           </button>
         </form>
-        <Button text="Publicá con nosotros" />
+        <Boton text="Publicá con nosotros" />
       </div>
     </header>
   );

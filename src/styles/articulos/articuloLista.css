@@ -1,0 +1,10 @@
+.articulo-list {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  gap: 2rem;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scrollbar-color: var(--white) transparent;
+  padding-bottom: 2rem;
+}

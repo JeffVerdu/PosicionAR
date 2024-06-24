@@ -1,9 +1,9 @@
 import "../../styles/destacados/destacados.css";
-import { Article } from "../common/Article";
-import { articles } from "../../articles";
+import { Articulo } from "../common/Articulo";
+import { articulos } from "../../articulos";
 
 export const Destacados = () => {
-  const destacadosArticles = articles.slice(0, 10);
+  const destacadosArticles = articulos.slice(0, 10);
 
   return (
     <section className="destacados section-box">
@@ -11,14 +11,14 @@ export const Destacados = () => {
         <h2 className="destacados-title">Destacados</h2>
 
         <div className="destacados-list">
-          {destacadosArticles.map((article) => (
-            <Article
-              key={article.id}
-              id={article.id}
-              title={article.title}
-              description={article.description}
-              price={article.price}
-              image={article.image}
+          {destacadosArticles.map((articulo) => (
+            <Articulo
+              key={articulo.id}
+              id={articulo.id}
+              title={articulo.title}
+              description={articulo.description}
+              price={articulo.price}
+              image={articulo.image}
             />
           ))}
         </div>

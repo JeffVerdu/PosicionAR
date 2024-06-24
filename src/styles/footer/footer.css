@@ -1,0 +1,39 @@
+@import "../base/variables.css";
+
+.footer-text {
+  padding: 1rem 0;
+  text-align: center;
+  font-weight: 200;
+  font-size: 1.4rem;
+}
+.footer-text span {
+  font-weight: 500;
+  color: var(--primaryColor);
+}
+@media (min-width: 768px) {
+  .footer-text {
+    font-size: 1.6rem;
+  }
+}
+
+.footer-content {
+  padding: 3rem 0;
+  position: relative;
+}
+.footer-medios {
+  position: relative;
+}
+.footer-mediosbg {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/footer-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  opacity: 0.3;
+}

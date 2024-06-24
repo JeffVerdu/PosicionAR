@@ -1,6 +1,6 @@
 @import url("../base/variables.css");
 
-.button {
+.boton {
   padding: 0.5rem 1rem;
   background-color: var(--secondaryColor);
   color: var(--white);
@@ -9,16 +9,16 @@
   cursor: pointer;
   transition: filter 0.3s;
 }
-.button:hover {
+.boton:hover {
   filter: brightness(0.95);
 }
 @media (min-width: 768px) {
-  .button {
+  .boton {
     font-size: 1.4rem;
   }
 }
 @media (min-width: 1024px) {
-  .button {
+  .boton {
     font-size: 1.6rem;
   }
 }

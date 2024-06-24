@@ -1,0 +1,27 @@
+@import url("../base/variables.css");
+
+.categoria-seccion {
+  margin-top: 1rem;
+  background-color: var(--gray);
+  padding: 2rem;
+  margin-bottom: 3rem;
+  border-radius: 2rem;
+  box-shadow: 0 0.2rem 0.5rem var(--black);
+}
+.categoria-seccion:last-of-type {
+  margin-bottom: 5rem;
+}
+
+.categoria-title {
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .categoria-title {
+    padding-left: 3rem;
+    font-size: 2.4rem;
+  }
+}

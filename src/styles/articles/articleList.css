@@ -1,7 +1,0 @@
-.article-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 200px);
-  gap: 1rem;
-  justify-content: center;
-  padding-top: 1rem;
-}

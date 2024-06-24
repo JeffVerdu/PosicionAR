@@ -1,9 +1,9 @@
-export interface Category {
+export interface Categoria {
   id: string;
   name: string;
 }
 
-export interface Article_Type {
+export interface Articulo_Tipo {
   id: string;
   title: string;
   description: string;

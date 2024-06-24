@@ -18,8 +18,25 @@
   width: 50%;
   margin: 0 auto 4rem auto;
 }
+@media (min-width: 1024px) {
+  .section-title {
+    width: 30%;
+  }
+}
+@media (min-width: 1440px) {
+  .section-title {
+    width: 10%;
+  }
+}
 
 a {
   text-decoration: none;
   color: var(--black);
+}
+
+.pt-5 {
+  padding-top: 5rem;
+}
+.pb-5 {
+  padding-bottom: 5rem;
 }

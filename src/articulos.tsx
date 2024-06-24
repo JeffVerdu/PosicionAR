@@ -1,6 +1,6 @@
-import { Article_Type } from "./types";
+import { Articulo_Tipo } from "./types";
 
-export const articles: Article_Type[] = [
+export const articulos: Articulo_Tipo[] = [
   {
     id: "1",
     title: "Título del objeto 1",
