@@ -3,8 +3,8 @@
 .destacados {
   background: linear-gradient(
     180deg,
-    rgba(0, 153, 51, 1) 70%,
-    rgba(255, 255, 255, 1) 100%
+    rgba(0, 51, 102, 1) 50%,
+    rgba(255, 255, 255, 1)
   );
   position: relative;
 }
@@ -29,5 +29,5 @@
   align-items: center;
   gap: 2rem;
   overflow-x: scroll;
-  scrollbar-color: rgb(185, 185, 185) transparent;
+  scrollbar-color: rgb(255 255 255) transparent;
 }
