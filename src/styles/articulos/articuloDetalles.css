@@ -1,0 +1,37 @@
+@import "../base/variables.css";
+
+.articuloDetalles {
+  background-color: var(--lightGray);
+  box-shadow: 0 0.2rem 0.5rem var(--black);
+  border-radius: 2rem;
+  margin: 0 auto 3rem auto !important;
+  padding: 1rem;
+}
+
+.articuloDetalles-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+}
+
+.articuloDetalles-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gray);
+  border-radius: 2rem;
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  .articuloDetalles-info {
+    flex-direction: row;
+  }
+}
+
+.anunciante-contacto {
+  background-color: var(--gray);
+  border-radius: 2rem;
+  padding: 1rem;
+}

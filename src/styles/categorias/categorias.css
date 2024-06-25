@@ -33,7 +33,7 @@
     transition: background-color 0.3s;
   }
   .categorias-list p:hover {
-    background-color: var(--gray);
+    background-color: var(--lightGray);
   }
 }
 @media (min-width: 768px) {
@@ -48,6 +48,7 @@
 }
 
 .activeCategory {
-  background-color: var(--gray);
+  background-color: var(--lightGray);
   border-radius: 0.5rem;
+  box-shadow: 0 0.2rem 0.5rem var(--black);
 }

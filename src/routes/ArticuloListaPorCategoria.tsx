@@ -1,12 +1,12 @@
 import { useParams } from "react-router-dom";
-import { categorias } from "../../categorias.tsx";
-import { articulos } from "../../articulos.tsx";
+import { categorias } from "../categorias.tsx";
+import { articulos } from "../articulos.tsx";
 import { useEffect, useState } from "react";
-import { Articulo_Tipo, Categoria } from "../../types";
-import { Articulo } from "../common/Articulo.tsx";
+import { Articulo_Tipo, Categoria } from "../types";
+import { Articulo } from "../components/common/Articulo.tsx";
 
-import "../../styles/articulos/articuloListaPorCategorita.css";
-import { Destacados } from "../destacados/Destacados.tsx";
+import "../styles/articulos/articuloListaPorCategorita.css";
+import { Destacados } from "../components/destacados/Destacados.tsx";
 
 export const ArticuloListaPorCategoria = () => {
   const [categoria, setCategoria] = useState<Categoria>();
@@ -33,7 +33,7 @@ export const ArticuloListaPorCategoria = () => {
       <div
         className="sectionTitle-bg"
         style={{
-          backgroundImage: ` linear-gradient(180deg, rgba(255, 255, 255, 0.2) 70%, rgb(255, 255, 255) 100%), 
+          backgroundImage: ` linear-gradient(180deg, rgb(255 255 255 / 0) 50%, rgb(255 255 255) 100%), 
     url(${categoria?.image})`,
         }}
       ></div>

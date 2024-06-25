@@ -22,3 +22,11 @@ export interface Admin {
   username: string;
   password: string;
 }
+
+export interface Anunciante {
+  id: string;
+  name: string;
+  email: string;
+  tlf: string;
+  anuncios: Articulo_Tipo[];
+}
