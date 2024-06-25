@@ -1,6 +1,7 @@
 export interface Categoria {
   id: string;
   name: string;
+  image: string;
 }
 
 export interface Articulo_Tipo {

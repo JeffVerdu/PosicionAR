@@ -44,3 +44,8 @@
     font-size: 1.6rem;
   }
 }
+
+.activeCategory {
+  background-color: var(--gray);
+  border-radius: 0.5rem;
+}

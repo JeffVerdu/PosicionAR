@@ -27,7 +27,7 @@
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  gap: 4rem;
+  gap: 2rem;
   overflow-x: scroll;
   scrollbar-color: rgb(185, 185, 185) transparent;
 }

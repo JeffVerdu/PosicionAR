@@ -3,15 +3,15 @@ import { Articulo } from "../common/Articulo";
 import "../../styles/articulos/articuloLista.css";
 
 interface Props {
-  cateogoriaId: string;
+  categoriaId: string;
 }
 
-export const ArticuloLista = ({ cateogoriaId }: Props) => {
+export const ArticuloLista = ({ categoriaId }: Props) => {
   return (
     <div className="articulo-list">
       {articulos.map(
         (articulo) =>
-          articulo.category.id === cateogoriaId && (
+          articulo.category.id === categoriaId && (
             <Articulo
               key={articulo.id}
               id={articulo.id}

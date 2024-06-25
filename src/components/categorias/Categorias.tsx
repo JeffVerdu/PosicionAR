@@ -1,21 +1,20 @@
+import { NavLink } from "react-router-dom";
 import { categorias } from "../../categorias";
 import "../../styles/categorias/categorias.css";
 
 export const Categorias = () => {
-  const handleClick = () => {};
-
   return (
     <section className="categorias">
       <div className="categorias-content">
         <div className="categorias-list container-box">
           {categorias.map((category) => (
-            <p
+            <NavLink
+              to={`/${category.id}`}
               key={category.id}
-              className="category"
-              onClick={() => handleClick()}
+              className={({ isActive }) => (isActive ? "activeCategory" : "")}
             >
-              {category.name}
-            </p>
+              <p>{category.name}</p>
+            </NavLink>
           ))}
         </div>
       </div>

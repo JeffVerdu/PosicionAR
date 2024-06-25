@@ -10,7 +10,7 @@ export const Secciones = () => {
           <h2 className="categoria-title">{categoria.name}</h2>
 
           <div className="articulos-seccion">
-            {<ArticuloLista cateogoriaId={categoria.id} />}
+            {<ArticuloLista categoriaId={categoria.id} />}
           </div>
         </section>
       ))}
