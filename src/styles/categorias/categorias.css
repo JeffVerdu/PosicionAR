@@ -7,7 +7,7 @@
 .categorias-list {
   display: flex;
   align-items: flex-start;
-  padding-bottom: 1rem;
+  padding: 0.5rem 0 1.5rem 0;
   gap: 0.5rem;
   overflow-x: scroll;
   scroll-behavior: smooth;
