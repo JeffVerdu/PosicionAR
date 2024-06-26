@@ -13,8 +13,9 @@ export interface Articulo_Tipo {
   email: string;
   category: Category;
   details: string;
-  image: string;
+  poster: string;
   date: Date;
+  images?: string[];
 }
 
 export interface Admin {

@@ -6,6 +6,7 @@ import { anunciantes } from "../anunciantes";
 import { Destacados } from "../components/destacados/Destacados";
 
 import "../styles/articulos/articuloDetalles.css";
+import { ImagesCarousel } from "../components/common/ImagesCarousel";
 
 export const ArticuloDetalles = () => {
   const [articulo, setArticulo] = useState<Articulo_Tipo | undefined>(
@@ -38,24 +39,21 @@ export const ArticuloDetalles = () => {
       <div className="articuloDetalles container-box">
         {articulo ? (
           <div className="articuloDetalles-grid">
-            <div className="articuloDetalles-info">
-              <div>
-                <img
-                  src={articulo.image}
-                  alt={articulo.title}
-                  className="articuloDetalles-img"
-                />
-              </div>
+            <div className="articuloDetalles-carousel">
+              <ImagesCarousel images={articulo.images} />
+            </div>
+            <div className="anunciante-contacto">
               <div className="articuloDetalles-text">
                 <h3>{articulo.title}</h3>
                 <p>{articulo.description}</p>
                 <p>${articulo.price}</p>
+                <p>{articulo.date.toLocaleDateString()}</p>
               </div>
-            </div>
-            <div className="anunciante-contacto">
-              <h3>{anunciante?.name}</h3>
-              <p>{anunciante?.tlf}</p>
-              <p>{anunciante?.email}</p>
+              <div className="articuloDetalles-contacto">
+                <h3>{anunciante?.name}</h3>
+                <p>{anunciante?.tlf}</p>
+                <p>{anunciante?.email}</p>
+              </div>
             </div>
           </div>
         ) : (

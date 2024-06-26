@@ -9,29 +9,45 @@
 }
 
 .articuloDetalles-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 1rem;
-}
-
-.articuloDetalles-info {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--gray);
-  border-radius: 2rem;
-  padding: 1rem;
+  gap: 3rem;
 }
 @media (min-width: 768px) {
-  .articuloDetalles-info {
-    flex-direction: row;
+  .articuloDetalles-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 2rem;
+    justify-content: center;
+    height: 25.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .articuloDetalles-grid {
+    height: 42rem;
+  }
+}
+
+.articuloDetalles-carousel {
+  width: 28rem;
+  margin: 0 auto;
+}
+@media (min-width: 380px) {
+  .articuloDetalles-carousel {
+    width: 31rem;
+  }
+}
+@media (min-width: 768px) {
+  .articuloDetalles-carousel {
+    width: 35rem;
+  }
+}
+@media (min-width: 1024px) {
+  .articuloDetalles-carousel {
+    width: 60rem;
   }
 }
 
 .anunciante-contacto {
-  background-color: var(--gray);
   border-radius: 2rem;
-  padding: 1rem;
 }

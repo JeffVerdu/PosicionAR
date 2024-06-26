@@ -1,11 +1,6 @@
-.articulo-list {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  gap: 2rem;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
-  scrollbar-color: var(--gray) transparent;
-  padding: 0 1rem 2rem 1rem;
-  height: 32rem;
+.slick-slide .articulo-slider {
+  max-width: 20rem;
+  height: 29rem;
+  margin: 0 1rem;
+  padding-top: 1rem;
 }

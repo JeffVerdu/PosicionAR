@@ -16,7 +16,7 @@ export const anunciantes: Anunciante[] = [
         email: "ejemplo1@mail.com",
         category: { id: "3", name: "Experiencias" },
         details: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-        image: "https://picsum.photos/200/300?random=1",
+        poster: "https://picsum.photos/200/300?random=1",
         date: new Date("2024-06-20"),
       },
       {
@@ -28,7 +28,7 @@ export const anunciantes: Anunciante[] = [
         email: "ejemplo2@mail.com",
         category: { id: "5", name: "Deportes" },
         details: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-        image: "https://picsum.photos/200/300?random=2",
+        poster: "https://picsum.photos/200/300?random=2",
         date: new Date("2024-06-20"),
       },
       {
@@ -40,7 +40,7 @@ export const anunciantes: Anunciante[] = [
         email: "ejemplo3@mail.com",
         category: { id: "6", name: "Gastronomía" },
         details: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-        image: "https://picsum.photos/200/300?random=3",
+        poster: "https://picsum.photos/200/300?random=3",
         date: new Date("2024-06-20"),
       },
       {
@@ -52,7 +52,7 @@ export const anunciantes: Anunciante[] = [
         email: "ejemplo4@mail.com",
         category: { id: "1", name: "Artículos" },
         details: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-        image: "https://picsum.photos/200/300?random=4",
+        poster: "https://picsum.photos/200/300?random=4",
         date: new Date("2024-06-20"),
       },
       {
@@ -64,7 +64,7 @@ export const anunciantes: Anunciante[] = [
         email: "ejemplo5@mail.com",
         category: { id: "5", name: "Deportes" },
         details: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-        image: "https://picsum.photos/200/300?random=5",
+        poster: "https://picsum.photos/200/300?random=5",
         date: new Date("2024-06-20"),
       },
       {
@@ -76,7 +76,7 @@ export const anunciantes: Anunciante[] = [
         email: "ejemplo6@mail.com",
         category: { id: "3", name: "Experiencias" },
         details: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-        image: "https://picsum.photos/200/300?random=6",
+        poster: "https://picsum.photos/200/300?random=6",
         date: new Date("2024-06-20"),
       },
       {
@@ -88,7 +88,7 @@ export const anunciantes: Anunciante[] = [
         email: "ejemplo7@mail.com",
         category: { id: "3", name: "Experiencias" },
         details: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-        image: "https://picsum.photos/200/300?random=7",
+        poster: "https://picsum.photos/200/300?random=7",
         date: new Date("2024-06-20"),
       },
       {
@@ -100,7 +100,7 @@ export const anunciantes: Anunciante[] = [
         email: "ejemplo8@mail.com",
         category: { id: "6", name: "Gastronomía" },
         details: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-        image: "https://picsum.photos/200/300?random=8",
+        poster: "https://picsum.photos/200/300?random=8",
         date: new Date("2024-06-20"),
       },
       {
@@ -112,7 +112,7 @@ export const anunciantes: Anunciante[] = [
         email: "ejemplo9@mail.com",
         category: { id: "4", name: "Entretenimiento" },
         details: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-        image: "https://picsum.photos/200/300?random=9",
+        poster: "https://picsum.photos/200/300?random=9",
         date: new Date("2024-06-20"),
       },
       {
@@ -124,7 +124,7 @@ export const anunciantes: Anunciante[] = [
         email: "ejemplo10@mail.com",
         category: { id: "4", name: "Entretenimiento" },
         details: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-        image: "https://picsum.photos/200/300?random=10",
+        poster: "https://picsum.photos/200/300?random=10",
         date: new Date("2024-06-20"),
       },
       {
@@ -136,7 +136,7 @@ export const anunciantes: Anunciante[] = [
         email: "ejemplo11@mail.com",
         category: { id: "6", name: "Gastronomía" },
         details: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-        image: "https://picsum.photos/200/300?random=11",
+        poster: "https://picsum.photos/200/300?random=11",
         date: new Date("2024-06-20"),
       },
       {
@@ -148,7 +148,7 @@ export const anunciantes: Anunciante[] = [
         email: "ejemplo12@mail.com",
         category: { id: "1", name: "Artículos" },
         details: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-        image: "https://picsum.photos/200/300?random=12",
+        poster: "https://picsum.photos/200/300?random=12",
         date: new Date("2024-06-20"),
       },
       {
@@ -160,7 +160,7 @@ export const anunciantes: Anunciante[] = [
         email: "ejemplo13@mail.com",
         category: { id: "3", name: "Experiencias" },
         details: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-        image: "https://picsum.photos/200/300?random=13",
+        poster: "https://picsum.photos/200/300?random=13",
         date: new Date("2024-06-20"),
       },
       {
@@ -172,7 +172,7 @@ export const anunciantes: Anunciante[] = [
         email: "ejemplo14@mail.com",
         category: { id: "5", name: "Deportes" },
         details: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-        image: "https://picsum.photos/200/300?random=14",
+        poster: "https://picsum.photos/200/300?random=14",
         date: new Date("2024-06-20"),
       },
       {
@@ -184,7 +184,7 @@ export const anunciantes: Anunciante[] = [
         email: "ejemplo15@mail.com",
         category: { id: "6", name: "Gastronomía" },
         details: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-        image: "https://picsum.photos/200/300?random=15",
+        poster: "https://picsum.photos/200/300?random=15",
         date: new Date("2024-06-20"),
       },
       {
@@ -196,7 +196,7 @@ export const anunciantes: Anunciante[] = [
         email: "ejemplo16@mail.com",
         category: { id: "3", name: "Experiencias" },
         details: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-        image: "https://picsum.photos/200/300?random=16",
+        poster: "https://picsum.photos/200/300?random=16",
         date: new Date("2024-06-20"),
       },
       {
@@ -208,7 +208,7 @@ export const anunciantes: Anunciante[] = [
         email: "ejemplo17@mail.com",
         category: { id: "5", name: "Deportes" },
         details: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-        image: "https://picsum.photos/200/300?random=17",
+        poster: "https://picsum.photos/200/300?random=17",
         date: new Date("2024-06-20"),
       },
       {
@@ -220,7 +220,7 @@ export const anunciantes: Anunciante[] = [
         email: "ejemplo18@mail.com",
         category: { id: "1", name: "Artículos" },
         details: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-        image: "https://picsum.photos/200/300?random=18",
+        poster: "https://picsum.photos/200/300?random=18",
         date: new Date("2024-06-20"),
       },
       {
@@ -232,7 +232,7 @@ export const anunciantes: Anunciante[] = [
         email: "ejemplo19@mail.com",
         category: { id: "4", name: "Entretenimiento" },
         details: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-        image: "https://picsum.photos/200/300?random=19",
+        poster: "https://picsum.photos/200/300?random=19",
         date: new Date("2024-06-20"),
       },
       {
@@ -244,7 +244,7 @@ export const anunciantes: Anunciante[] = [
         email: "ejemplo20@mail.com",
         category: { id: "3", name: "Experiencias" },
         details: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-        image: "https://picsum.photos/200/300?random=20",
+        poster: "https://picsum.photos/200/300?random=20",
         date: new Date("2024-06-20"),
       },
       {
@@ -256,7 +256,7 @@ export const anunciantes: Anunciante[] = [
         email: "ejemplo21@mail.com",
         category: { id: "4", name: "Entretenimiento" },
         details: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-        image: "https://picsum.photos/200/300?random=21",
+        poster: "https://picsum.photos/200/300?random=21",
         date: new Date("2024-06-20"),
       },
       {
@@ -268,7 +268,7 @@ export const anunciantes: Anunciante[] = [
         email: "ejemplo22@mail.com",
         category: { id: "2", name: "Servicios" },
         details: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-        image: "https://picsum.photos/200/300?random=22",
+        poster: "https://picsum.photos/200/300?random=22",
         date: new Date("2024-06-20"),
       },
       {
@@ -280,7 +280,7 @@ export const anunciantes: Anunciante[] = [
         email: "ejemplo23@mail.com",
         category: { id: "5", name: "Deportes" },
         details: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-        image: "https://picsum.photos/200/300?random=23",
+        poster: "https://picsum.photos/200/300?random=23",
         date: new Date("2024-06-20"),
       },
       {
@@ -292,7 +292,7 @@ export const anunciantes: Anunciante[] = [
         email: "ejemplo24@mail.com",
         category: { id: "6", name: "Gastronomía" },
         details: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-        image: "https://picsum.photos/200/300?random=24",
+        poster: "https://picsum.photos/200/300?random=24",
         date: new Date("2024-06-20"),
       },
       {
@@ -304,7 +304,7 @@ export const anunciantes: Anunciante[] = [
         email: "ejemplo25@mail.com",
         category: { id: "1", name: "Artículos" },
         details: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-        image: "https://picsum.photos/200/300?random=25",
+        poster: "https://picsum.photos/200/300?random=25",
         date: new Date("2024-06-20"),
       },
     ],

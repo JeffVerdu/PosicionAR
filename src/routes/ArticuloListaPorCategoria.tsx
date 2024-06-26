@@ -46,7 +46,7 @@ export const ArticuloListaPorCategoria = () => {
             title={articulo.title}
             description={articulo.description}
             price={articulo.price}
-            image={articulo.image}
+            image={articulo.poster}
           />
         ))}
       </div>
