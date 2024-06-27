@@ -33,7 +33,7 @@ export const ArticuloListaPorCategoria = () => {
       <div
         className="sectionTitle-bg"
         style={{
-          backgroundImage: ` linear-gradient(180deg, rgb(255 255 255 / 0) 50%, rgb(255 255 255) 100%), 
+          backgroundImage: ` linear-gradient(180deg, rgb(255 255 255 / 0), rgb(255 255 255) 100%), 
     url(${categoria?.image})`,
         }}
       ></div>

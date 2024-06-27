@@ -7,6 +7,7 @@ import { Destacados } from "../components/destacados/Destacados";
 
 import "../styles/articulos/articuloDetalles.css";
 import { ImagesCarousel } from "../components/common/ImagesCarousel";
+import { PhoneOutgoing, Send } from "lucide-react";
 
 export const ArticuloDetalles = () => {
   const [articulo, setArticulo] = useState<Articulo_Tipo | undefined>(
@@ -45,14 +46,37 @@ export const ArticuloDetalles = () => {
             <div className="anunciante-contacto">
               <div className="articuloDetalles-text">
                 <h3>{articulo.title}</h3>
-                <p>{articulo.description}</p>
-                <p>${articulo.price}</p>
-                <p>{articulo.date.toLocaleDateString()}</p>
+                <p className="articuloDetalles-description">
+                  {articulo.details}
+                </p>
+                <p className="articuloDetalles-precio">
+                  Precio: ${articulo.price}
+                </p>
+                <p className="articuloDetalles-fecha">
+                  Fecha de publicación: {articulo.date.toLocaleDateString()}
+                </p>
               </div>
               <div className="articuloDetalles-contacto">
-                <h3>{anunciante?.name}</h3>
-                <p>{anunciante?.tlf}</p>
-                <p>{anunciante?.email}</p>
+                <h3>Datos del anunciante</h3>
+                <p>Nombre: {anunciante?.name}</p>
+                <a
+                  href={`tel:${anunciante?.tlf}`}
+                  className="articuloDetalles-tlf"
+                >
+                  Teléfono: {anunciante?.tlf}
+                  <div>
+                    <PhoneOutgoing color="#212529" size={20} />
+                  </div>
+                </a>
+                <a
+                  href={`mailto:${anunciante?.email}`}
+                  className="articuloDetalles-email"
+                >
+                  Correo: {anunciante?.email}
+                  <div>
+                    <Send color="#212529" size={20} />
+                  </div>
+                </a>
               </div>
             </div>
           </div>

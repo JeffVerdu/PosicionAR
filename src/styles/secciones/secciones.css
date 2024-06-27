@@ -5,7 +5,7 @@
   background-color: var(--lightGray);
   padding: 2rem;
   margin-bottom: 3rem;
-  border-radius: 2rem;
+  border-radius: 1rem;
   box-shadow: 0 0.2rem 0.5rem var(--black);
 }
 .categoria-seccion:last-of-type {

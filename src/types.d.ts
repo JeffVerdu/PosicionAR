@@ -8,7 +8,7 @@ export interface Articulo_Tipo {
   id: string;
   title: string;
   description: string;
-  price: number;
+  price: number | string;
   tlf: string;
   email: string;
   category: Category;
