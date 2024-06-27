@@ -5,13 +5,18 @@
   flex-shrink: 0;
   flex-grow: 0;
   flex-basis: auto;
-  width: 20rem;
+  width: 18rem;
   box-shadow: 0 0.2rem 0.5rem var(--black);
-  transition: all 0.3s ease-out;
   border: none !important;
 }
-.articulo:hover {
-  transform: scale(1.05);
+@media (min-width: 1024px) {
+  .articulo {
+    width: 20rem;
+    transition: all 0.3s ease-out;
+  }
+  .articulo:hover {
+    transform: scale(1.05);
+  }
 }
 
 .articulo-image {
