@@ -8,11 +8,14 @@ import "slick-carousel/slick/slick-theme.css";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/base/globals.css";
+import { SearchProvider } from "./components/context/SearchProvider.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <SearchProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </SearchProvider>
   </React.StrictMode>
 );

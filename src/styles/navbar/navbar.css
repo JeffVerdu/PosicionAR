@@ -53,54 +53,12 @@
 .navbar-item {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   gap: 1rem;
 }
 @media (min-width: 768px) {
   .navbar-item {
     flex-direction: row;
     gap: 5rem;
-  }
-}
-
-.search {
-  display: flex;
-  gap: 0.5rem;
-}
-.search input {
-  padding: 0.5rem 1rem;
-  border: 1px solid var(--primaryColor);
-  border-radius: 0.5rem;
-}
-.search input:focus {
-  outline-color: var(--primaryColor);
-  box-shadow: 0 0 5px rgba(0, 51, 102, 0.5);
-}
-.search button {
-  padding: 0.5rem 1rem;
-  background-color: var(--primaryColor);
-  color: var(--white);
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  width: 3rem;
-  height: 3rem;
-}
-@media (min-width: 768px) {
-  .search input {
-    font-size: 1.4rem;
-  }
-  .search button {
-    width: 3.2rem;
-    height: 3.2rem;
-  }
-}
-@media (min-width: 1024px) {
-  .search input {
-    font-size: 1.6rem;
-  }
-  .search button {
-    width: 3.5rem;
-    height: 3.5rem;
   }
 }

@@ -31,3 +31,8 @@ export interface Anunciante {
   tlf: string;
   anuncios: Articulo_Tipo[];
 }
+
+export interface SearchContextType {
+  searchTerm: string;
+  setSearchTerm: React.Dispatch<React.SetStateAction<string>>;
+}
