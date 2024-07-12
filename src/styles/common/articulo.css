@@ -6,6 +6,8 @@
   flex-grow: 0;
   flex-basis: auto;
   width: 18rem;
+  min-height: 30rem;
+  max-height: 30rem;
   box-shadow: 0 0.2rem 0.5rem var(--black);
   border: none !important;
 }
@@ -35,8 +37,10 @@
 .articulo-footer {
   background-color: var(--white) !important;
   display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   border: none !important;
 }
 

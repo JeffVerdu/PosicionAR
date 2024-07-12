@@ -5,7 +5,7 @@ export const Main = () => {
   return (
     <>
       <Destacados />
-      <h2 className="section-title">Anuncios</h2>
+      <h2 className="section-title">Explora anuncios</h2>
       <Secciones />
     </>
   );

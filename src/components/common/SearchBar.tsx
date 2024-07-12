@@ -42,7 +42,7 @@ export const SearchBar = () => {
         <input
           onChange={handleInputChange}
           value={inputValue}
-          placeholder="Ej: 'Excursiones'"
+          placeholder="Ej: 'Excursión'"
           type="text"
           required
         />

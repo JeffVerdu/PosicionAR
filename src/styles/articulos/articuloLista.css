@@ -1,6 +1,6 @@
 .slick-slide .articulo-slider {
   max-width: 20rem;
-  height: 29rem;
+  min-height: 34rem;
   margin: 0 1rem;
-  padding-top: 1rem;
+  padding: 1rem 0;
 }

@@ -60,6 +60,10 @@
   font-size: 2.4rem;
   margin-bottom: 2rem;
 }
+.articuloDetalles-precio {
+  margin-top: 1rem;
+  font-weight: 700;
+}
 .articuloDetalles-fecha {
   font-size: 1.2rem;
   text-align: center;

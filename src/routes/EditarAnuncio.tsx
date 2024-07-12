@@ -178,8 +178,8 @@ export const EditarAnuncio = () => {
                 {...register("description", {
                   required: "La descripción es requerida",
                   maxLength: {
-                    value: 80,
-                    message: "El título no puede tener más de 80 caracteres",
+                    value: 76,
+                    message: "El título no puede tener más de 76 caracteres",
                   },
                 })}
               />

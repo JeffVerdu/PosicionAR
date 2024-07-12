@@ -187,8 +187,8 @@ export const CrearAnuncio = () => {
                 {...register("description", {
                   required: "La descripción es requerida",
                   maxLength: {
-                    value: 80,
-                    message: "El título no puede tener más de 80 caracteres",
+                    value: 76,
+                    message: "El título no puede tener más de 76 caracteres",
                   },
                 })}
               />
@@ -200,7 +200,7 @@ export const CrearAnuncio = () => {
               <label htmlFor="price">Precio</label>
               <input
                 type="number"
-                placeholder="Ejemplo: 4000000"
+                placeholder="Ejemplo: 4.000.000"
                 {...register("price", { required: "El precio es requerido" })}
               />
               {errors.price && (
@@ -231,6 +231,7 @@ export const CrearAnuncio = () => {
                 placeholder="Escribir todos los detalles del anuncio"
                 {...register("details", {
                   required: "Los detalles son requeridos",
+                  maxLength: { value: 300, message: "Máximo 300 caracteres" },
                 })}
               />
               {errors.details && (
