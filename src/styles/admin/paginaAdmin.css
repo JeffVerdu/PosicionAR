@@ -1,0 +1,69 @@
+@import url("../base/variables.css");
+
+.admin-container {
+  background: var(--bgGradient);
+  min-height: 100dvh;
+}
+
+.logo-admin {
+  background-color: var(--white);
+  color: var(--primaryColor);
+  font-weight: 900;
+  margin: 0;
+  width: 100%;
+  height: 10dvh;
+  place-content: center;
+  padding-left: 5%;
+  font-size: 3rem;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  min-height: 90dvh;
+  place-content: center;
+}
+
+.opciones-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+@media (min-width: 1024px) {
+  .opciones-container {
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+
+.button-admin {
+  background-color: var(--secondaryColor);
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 1rem;
+  transition: all 0.3s ease-out;
+}
+.button-admin:hover {
+  filter: brightness(0.8);
+}
+
+.button-signout {
+  background-color: red;
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 1rem;
+  transition: all 0.3s ease-out;
+  margin: 0 auto;
+}
+.button-signout:hover {
+  filter: brightness(0.8);
+}

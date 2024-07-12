@@ -1,5 +1,5 @@
 import { createContext, useState, ReactNode, useEffect } from "react";
-import { SearchContextType } from "../../types";
+import { SearchContextType } from "../types";
 
 export const SearchContext = createContext<SearchContextType | undefined>(
   undefined

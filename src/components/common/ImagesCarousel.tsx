@@ -1,5 +1,7 @@
 import Slider from "react-slick";
 
+import "../../styles/common/imagesCarousel.css";
+
 interface Props {
   images?: string[];
 }
@@ -17,7 +19,7 @@ export const ImagesCarousel = ({ images }: Props) => {
   return (
     <Slider {...settings}>
       {(images ?? []).map((image, index) => (
-        <div key={index} className="imageCarousel">
+        <div key={index} className="carousel-item">
           <img src={image} alt={`imagen ${index}`} />
         </div>
       ))}

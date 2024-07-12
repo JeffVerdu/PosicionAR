@@ -5,7 +5,7 @@
   box-shadow: 0 0.2rem 0.5rem var(--black);
   border-radius: 1rem;
   margin: 0 auto 3rem auto !important;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .articuloDetalles-grid {
@@ -17,7 +17,6 @@
   .articuloDetalles-grid {
     display: grid;
     grid-template-columns: 3fr 2fr;
-    gap: 2rem;
     justify-content: center;
     align-items: center;
     min-height: 25.5rem;
@@ -50,8 +49,12 @@
 }
 
 .articuloDetalles-text {
-  font-size: 1.8rem;
+  background-color: white;
+  box-shadow: 0 0.2rem 0.5rem var(--black);
+  padding: 2rem;
   margin-bottom: 3rem;
+  border-radius: 0.5rem;
+  font-size: 1.8rem;
 }
 .articuloDetalles-text h3 {
   font-size: 2.4rem;
@@ -64,6 +67,10 @@
 
 .articuloDetalles-contacto {
   font-size: 1.8rem;
+  background-color: white;
+  box-shadow: 0 0.2rem 0.5rem var(--black);
+  padding: 2rem;
+  border-radius: 0.5rem;
 }
 .articuloDetalles-contacto > * {
   margin-bottom: 1rem;
@@ -77,5 +84,4 @@
 .articuloDetalles-contacto h3 {
   font-size: 2.4rem;
   margin-bottom: 2rem;
-  text-align: center;
 }

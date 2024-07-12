@@ -1,35 +1,33 @@
+import { Loading } from "./components/common/Loading";
+
 export interface Categoria {
   id: string;
+  key: string;
   name: string;
   image: string;
 }
 
-export interface Articulo_Tipo {
+export interface Anuncio_Tipo {
   id: string;
   title: string;
   description: string;
   price: number | string;
-  tlf: string;
-  email: string;
-  category: Category;
+  category: string;
   details: string;
   poster: string;
   date: Date;
   images?: string[];
+  anunciante: {
+    name: string;
+    email: string;
+    tlf: string;
+  };
+  destacado: boolean | string;
 }
 
 export interface Admin {
-  id: string;
   username: string;
   password: string;
-}
-
-export interface Anunciante {
-  id: string;
-  name: string;
-  email: string;
-  tlf: string;
-  anuncios: Articulo_Tipo[];
 }
 
 export interface SearchContextType {

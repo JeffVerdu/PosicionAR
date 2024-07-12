@@ -1,0 +1,148 @@
+@import url("../base/variables.css");
+
+.crear-container {
+  background: var(--bgGradient);
+  min-height: 100dvh;
+  color: var(--white);
+  text-align: center;
+  padding: 3rem 0;
+  font-size: 2rem;
+}
+
+.crear-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.create-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 5rem auto 0 auto;
+  font-size: 2rem;
+  row-gap: 2rem;
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  .create-form {
+    flex-direction: row;
+    column-gap: 3rem;
+    justify-content: center;
+  }
+}
+.create-form label {
+  display: block;
+  text-align: left;
+}
+
+.create-form input,
+.create-form textarea,
+.create-form select {
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.create-form input[type="text"],
+.create-form textarea,
+.create-form input[type="number"],
+.create-form input[type="email"],
+.create-form input[type="tel"],
+.create-form input[type="file"],
+.create-form select {
+  width: 100%;
+}
+.create-form textarea {
+  height: 15rem;
+}
+.create-form input[type="file"] {
+  font-size: 1.4rem;
+}
+@media (min-width: 768px) {
+  .create-form input[type="text"],
+  .create-form textarea,
+  .create-form input[type="number"],
+  .create-form input[type="email"],
+  .create-form input[type="tel"],
+  .create-form input[type="file"],
+  .create-form select {
+    width: 30rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .anuncio-container,
+  .anunciante-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 2rem;
+  }
+}
+
+.form-break {
+  flex-basis: 100%;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.form-button {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+.register-button {
+  background-color: var(--secondaryColor);
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 1rem;
+  transition: all 0.3s ease-out;
+}
+.register-button:hover {
+  filter: brightness(0.8);
+}
+
+.back-button {
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: rgb(220 38 38);
+  color: var(--white);
+  transition: all 0.3s ease-out;
+}
+.back-button:hover {
+  filter: brightness(0.9);
+}
+
+.error {
+  display: block;
+  color: rgb(220 38 38);
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-align: left;
+  text-shadow: 1px 1px 1px rgb(0 0 0);
+}
+
+.file-list {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.4rem;
+  align-items: center;
+}
+
+.file-list button {
+  border: none;
+  padding: 0.3rem 0.5rem;
+  font-size: 1.2rem;
+}
+
+.fileList-container {
+  margin-top: 1rem;
+}

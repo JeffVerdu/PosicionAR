@@ -1,0 +1,83 @@
+.lista-anuncios-container {
+  margin: 0 auto;
+  padding: 3rem 0;
+  background: var(--bgGradient);
+  min-height: 100dvh;
+  color: var(--white);
+}
+
+.crear-button {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.4rem;
+  border-radius: 1rem;
+}
+
+.anuncios-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.anuncio-item {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.anuncio-info h2 {
+  margin-top: 0;
+}
+
+.anuncio-actions button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #008cba;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+}
+
+.search-container {
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.load-more-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+}

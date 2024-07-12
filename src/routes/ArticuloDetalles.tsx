@@ -1,39 +1,59 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Anunciante, Articulo_Tipo } from "../types";
-import { articulos } from "../articulos";
-import { anunciantes } from "../anunciantes";
+import { Anuncio_Tipo } from "../types";
 import { Destacados } from "../components/destacados/Destacados";
-
-import "../styles/articulos/articuloDetalles.css";
 import { ImagesCarousel } from "../components/common/ImagesCarousel";
 import { PhoneOutgoing, Send } from "lucide-react";
+import { obtenerAnuncioPorId } from "../services/firebaseServices";
+import { Timestamp } from "firebase/firestore";
+import { Loading } from "../components/common/Loading";
+
+import "../styles/articulos/articuloDetalles.css";
 
 export const ArticuloDetalles = () => {
-  const [articulo, setArticulo] = useState<Articulo_Tipo | undefined>(
-    undefined
-  );
-  const [anunciante, setAnunciante] = useState<Anunciante | undefined>(
-    undefined
-  );
+  const [articulo, setArticulo] = useState<Anuncio_Tipo | undefined>(undefined);
+  const [imagenes, setImagenes] = useState<string[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string>("");
   const params = useParams();
   const { articuloId } = params;
 
   useEffect(() => {
     window.scrollTo(0, 0);
 
-    const articuloEncontrado = articulos.find(
-      (articulo) => articulo.id === articuloId
-    );
+    const cargarArticulo = async () => {
+      try {
+        const articuloObtenido = await obtenerAnuncioPorId(articuloId!);
+        if (articuloObtenido.date instanceof Timestamp) {
+          articuloObtenido.date = articuloObtenido.date.toDate();
+        }
 
-    setArticulo(articuloEncontrado);
+        if (articuloObtenido) {
+          const todasImagenes = [
+            articuloObtenido.poster,
+            ...(articuloObtenido.images ?? []),
+          ];
+          setImagenes(todasImagenes);
+          setArticulo(articuloObtenido);
+        }
+      } catch (error) {
+        setError("Error al obtener el artículo");
+        console.error(error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
 
-    const anuncianteEncontrado = anunciantes.find((anunciante) =>
-      anunciante.anuncios.find((anuncio) => anuncio.id === articuloId)
-    );
-
-    setAnunciante(anuncianteEncontrado);
+    cargarArticulo();
   }, [articuloId]);
+
+  if (isLoading) {
+    return <Loading />;
+  }
+
+  if (error) {
+    return <div>{error}</div>;
+  }
 
   return (
     <>
@@ -41,7 +61,7 @@ export const ArticuloDetalles = () => {
         {articulo ? (
           <div className="articuloDetalles-grid">
             <div className="articuloDetalles-carousel">
-              <ImagesCarousel images={articulo.images} />
+              <ImagesCarousel images={imagenes} />
             </div>
             <div className="anunciante-contacto">
               <div className="articuloDetalles-text">
@@ -58,21 +78,21 @@ export const ArticuloDetalles = () => {
               </div>
               <div className="articuloDetalles-contacto">
                 <h3>Datos del anunciante</h3>
-                <p>Nombre: {anunciante?.name}</p>
+                <p>Nombre: {articulo.anunciante.name}</p>
                 <a
-                  href={`tel:${anunciante?.tlf}`}
+                  href={`tel:${articulo.anunciante.tlf}`}
                   className="articuloDetalles-tlf"
                 >
-                  Teléfono: {anunciante?.tlf}
+                  Teléfono: {articulo.anunciante.tlf}
                   <div>
                     <PhoneOutgoing color="#212529" size={20} />
                   </div>
                 </a>
                 <a
-                  href={`mailto:${anunciante?.email}`}
+                  href={`mailto:${articulo.anunciante.email}`}
                   className="articuloDetalles-email"
                 >
-                  Correo: {anunciante?.email}
+                  Correo: {articulo.anunciante.email}
                   <div>
                     <Send color="#212529" size={20} />
                   </div>
