@@ -178,17 +178,3 @@ export const uploadImage = async (file: File | Blob) => {
     return null;
   }
 };
-
-// FUNCIÓN PARA INSERTAR LOS ANUNCIOS DE EJEMPLO
-// export const insertarAnuncios = async () => {
-//   const anunciosCollection = collection(db, "anuncios");
-
-//   for (const anuncio of articulos) {
-//     try {
-//       const docRef = await addDoc(anunciosCollection, anuncio);
-//       console.log(`Anuncio añadido con ID ${docRef.id}`);
-//     } catch (error) {
-//       console.error(`Error añadiendo un anuncio:`, error);
-//     }
-//   }
-// };

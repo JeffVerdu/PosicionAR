@@ -1,4 +1,3 @@
-// ListaAnuncios.tsx
 import React, { useEffect, useState, useCallback } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {
@@ -9,6 +8,7 @@ import {
 import { Anuncio_Tipo } from "../types";
 import { toast, Toaster } from "react-hot-toast";
 import debounce from "lodash.debounce";
+
 import "../styles/admin/listarAnuncios.css";
 
 const ITEMS_PER_PAGE = 15;
@@ -56,11 +56,9 @@ export const ListarAnuncios: React.FC = () => {
     if (window.confirm("¿Está seguro de que desea eliminar este anuncio?")) {
       try {
         await eliminarAnuncio(id);
-        setAnuncios((prevAnuncios) =>
-          prevAnuncios.filter((anuncio) => anuncio.id !== id)
-        );
-        setFilteredAnuncios((prevFiltered) =>
-          prevFiltered.filter((anuncio) => anuncio.id !== id)
+        setAnuncios((prev) => prev.filter((anuncio) => anuncio.id !== id));
+        setFilteredAnuncios((prev) =>
+          prev.filter((anuncio) => anuncio.id !== id)
         );
         toast.success("Anuncio eliminado con éxito");
       } catch (err) {
@@ -70,71 +68,54 @@ export const ListarAnuncios: React.FC = () => {
     }
   };
 
-  const handleLoadMore = () => {
-    if (!loading && hasMore) {
-      cargarAnuncios();
-    }
-  };
-
-  const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const term = event.target.value;
-    setSearchTerm(term);
-
-    // Client-side filtering for immediate feedback
-    const filtered = anuncios.filter((anuncio) =>
-      anuncio.title.toLowerCase().includes(term.toLowerCase())
-    );
-    setFilteredAnuncios(filtered);
-
-    // Debounced server-side search
-    debouncedServerSearch(term);
-  };
-
-  const serverSearch = async (term: string) => {
-    if (term.length > 0) {
+  const handleSearch = useCallback(
+    debounce(async (term: string) => {
+      if (term === "") {
+        setFilteredAnuncios(anuncios);
+        return;
+      }
       try {
         setLoading(true);
-        const { anuncios: searchResults } = await buscarAnuncios(term);
-        setFilteredAnuncios(searchResults);
-        setHasMore(false); // Disable "Load More" for search results
+        const resultados = await buscarAnuncios(term);
+        setFilteredAnuncios(resultados.anuncios);
       } catch (err) {
-        console.error("Error en la búsqueda:", err);
-        toast.error("Error al realizar la búsqueda");
+        console.error("Error al buscar anuncios:", err);
+        setFilteredAnuncios([]);
       } finally {
         setLoading(false);
       }
-    } else {
-      setFilteredAnuncios(anuncios);
-      setHasMore(true);
-    }
+    }, 500),
+    [anuncios]
+  );
+
+  useEffect(() => {
+    handleSearch(searchTerm);
+  }, [searchTerm, handleSearch]);
+
+  const handleLoadMore = () => {
+    cargarAnuncios();
   };
-
-  const debouncedServerSearch = useCallback(debounce(serverSearch, 300), []);
-
-  if (error) {
-    return <div>{error}</div>;
-  }
 
   return (
     <div className="lista-anuncios-container">
       <div className="container">
-        <div className="crear-navbar container-box">
-          <div>
-            <h1>Lista de Anuncios</h1>
-            <Link to="/admin/nuevo-anuncio">
+        <div className="header">
+          <h1>Listado de Anuncios</h1>
+          <div className="actions">
+            <Link to="/admin/crear-anuncio">
               <button className="crear-button">Crear Nuevo Anuncio</button>
             </Link>
+            <Link to="/admin">
+              <button className="back-button">Volver</button>
+            </Link>
           </div>
-          <Link to="/admin">
-            <button className="back-button">Volver</button>
-          </Link>
         </div>
         <div className="search-container">
           <input
             type="text"
             placeholder="Buscar por título..."
             value={searchTerm}
-            onChange={handleSearch}
+            onChange={(e) => setSearchTerm(e.target.value)}
             className="search-input"
           />
         </div>
@@ -165,7 +146,7 @@ export const ListarAnuncios: React.FC = () => {
             </li>
           ))}
         </ul>
-        {loading && <div>Cargando anuncios...</div>}
+        {loading && <div className="span-carga">Cargando anuncios...</div>}
         {!loading && hasMore && searchTerm.length === 0 && (
           <button onClick={handleLoadMore} className="load-more-button">
             Cargar más
@@ -175,10 +156,10 @@ export const ListarAnuncios: React.FC = () => {
           !hasMore &&
           filteredAnuncios.length > 0 &&
           searchTerm.length === 0 && (
-            <div>No hay más anuncios para cargar.</div>
+            <div className="span-carga">No hay más anuncios para cargar.</div>
           )}
         {!loading && filteredAnuncios.length === 0 && (
-          <div>No se encontraron anuncios.</div>
+          <div className="span-carga">No se encontraron anuncios.</div>
         )}
         <Toaster />
       </div>

@@ -190,8 +190,8 @@ export const EditarAnuncio = () => {
             <div>
               <label htmlFor="price">Precio</label>
               <input
-                type="number"
-                placeholder="Ejemplo: 4000000"
+                type="text"
+                placeholder="Ejemplo: 4.000.000"
                 defaultValue={anuncio?.price}
                 {...register("price", { required: "El precio es requerido" })}
               />

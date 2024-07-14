@@ -199,7 +199,7 @@ export const CrearAnuncio = () => {
             <div>
               <label htmlFor="price">Precio</label>
               <input
-                type="number"
+                type="text"
                 placeholder="Ejemplo: 4.000.000"
                 {...register("price", { required: "El precio es requerido" })}
               />

@@ -15,17 +15,17 @@
   text-align: center;
   border-bottom: 2px solid var(--primaryColor);
   padding-bottom: 1rem;
-  width: 50%;
+  width: 60%;
   margin: 0 auto 4rem auto;
 }
 @media (min-width: 1024px) {
   .section-title {
-    width: 30%;
+    width: 40%;
   }
 }
 @media (min-width: 1440px) {
   .section-title {
-    width: 10%;
+    width: 20%;
   }
 }
 
@@ -61,4 +61,8 @@ p {
   min-height: 100dvh;
   place-content: center;
   background-color: rgb(0 0 0 / 0.2);
+}
+
+.no-hay-anuncios {
+  text-align: center;
 }

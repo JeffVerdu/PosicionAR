@@ -6,15 +6,21 @@
   color: var(--white);
 }
 
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5rem;
+}
+
 .crear-button {
-  margin-bottom: 20px;
-  padding: 10px 20px;
+  padding: 5px 10px;
   background-color: #4caf50;
   color: white;
   border: none;
   cursor: pointer;
-  font-size: 1.4rem;
-  border-radius: 1rem;
+  font-size: 2rem;
+  border-radius: 0.5rem;
 }
 
 .anuncios-list {
@@ -58,7 +64,7 @@
 }
 
 .search-container {
-  margin-bottom: 20px;
+  margin: 2rem 0;
 }
 
 .search-input {
@@ -80,4 +86,11 @@
   font-size: 1.2rem;
   font-weight: 500;
   border-radius: 0.5rem;
+}
+
+.span-carga {
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  margin: 3rem 0;
 }

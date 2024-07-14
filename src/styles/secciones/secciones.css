@@ -7,6 +7,7 @@
   margin-bottom: 3rem;
   border-radius: 1rem;
   box-shadow: 0 0.2rem 0.5rem var(--black);
+  min-height: 30rem;
 }
 .categoria-seccion:last-of-type {
   margin-bottom: 5rem;

@@ -45,6 +45,12 @@ export const ArticuloLista = ({ categoriaId }: Props) => {
     return <div>{error}</div>;
   }
 
+  if (articulosCategoria.length === 0) {
+    return (
+      <h2 className="no-hay-anuncios">No hay anuncios en esta categoría</h2>
+    );
+  }
+
   let settings = {
     className: "center",
     dots: true,

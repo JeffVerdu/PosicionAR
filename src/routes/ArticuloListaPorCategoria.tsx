@@ -93,7 +93,6 @@ export const ArticuloListaPorCategoria = () => {
           }}
         ></div>
       )}
-
       <div className="articulosPorCategoria-list">
         {articulosFiltrados.map((articulo) => (
           <Articulo
