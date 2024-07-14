@@ -96,6 +96,10 @@ export const ListarAnuncios: React.FC = () => {
     cargarAnuncios();
   };
 
+  if (error) {
+    <h3>Error</h3>;
+  }
+
   return (
     <div className="lista-anuncios-container">
       <div className="container">
