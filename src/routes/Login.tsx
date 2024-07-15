@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
+import { toast, Toaster } from "react-hot-toast";
 
 import { Admin } from "../types";
 
@@ -29,9 +30,16 @@ export const Login = () => {
     e.preventDefault();
     try {
       await login(admin.username, admin.password);
-      navigate("/admin");
+      toast.success(`Ha ingresado correctamente`, {
+        style: { fontSize: "2rem" },
+      });
+      setTimeout(() => {
+        navigate("/admin");
+      }, 1000);
     } catch (error) {
-      console.log(error);
+      toast.error(`Usuario o contraseña incorrectos`, {
+        style: { fontSize: "2rem" },
+      });
     }
   };
 
@@ -70,6 +78,7 @@ export const Login = () => {
           </div>
         </div>
       </div>
+      <Toaster />
     </div>
   );
 };

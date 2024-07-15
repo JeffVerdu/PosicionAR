@@ -2,6 +2,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
 import "../styles/admin/paginaAdmin.css";
+import { useEffect } from "react";
+import { Toaster } from "react-hot-toast";
 
 export const PaginaAdmin = () => {
   const { currentUser, loading, signout } = useAuth();
@@ -49,6 +51,7 @@ export const PaginaAdmin = () => {
           </button>
         </div>
       </main>
+      <Toaster />
     </>
   );
 };
