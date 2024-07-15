@@ -16,31 +16,7 @@ export const ContactoMedios = () => {
               />
               2622 24 9006
             </a>
-            <p className="contacto-nombre">Roberto</p>
-          </div>
-          {/* Fin contacto-item */}
-          <div className="contacto-item">
-            <a href="https://wa.me/5492622249006" className="contacto-link">
-              <img
-                className="contacto-icono"
-                src="/whatsapp.svg"
-                alt="Whatsapp"
-              />
-              2622 24 9006
-            </a>
-            <p className="contacto-nombre">Roberto</p>
-          </div>
-          {/* Fin contacto-item */}
-          <div className="contacto-item">
-            <a href="https://wa.me/5492622249006" className="contacto-link">
-              <img
-                className="contacto-icono"
-                src="/whatsapp.svg"
-                alt="Whatsapp"
-              />
-              2622 24 9006
-            </a>
-            <p className="contacto-nombre">Roberto</p>
+            <p className="contacto-nombre">Roberto Ferreyra</p>
           </div>
           {/* Fin contacto-item */}
         </div>
@@ -54,21 +30,7 @@ export const ContactoMedios = () => {
           <div className="contacto-item">
             <a href="mailto:ejemplo1@gmail.com" className="contacto-link">
               <img className="contacto-icono" src="/gmail.svg" alt="Whatsapp" />
-              ejemplo1@gmail.com
-            </a>
-          </div>
-          {/* Fin contacto-item */}
-          <div className="contacto-item">
-            <a href="mailto:ejemplo2@gmail.com" className="contacto-link">
-              <img className="contacto-icono" src="/gmail.svg" alt="Whatsapp" />
-              ejemplo2@gmail.com
-            </a>
-          </div>
-          {/* Fin contacto-item */}
-          <div className="contacto-item">
-            <a href="mailto:ejemplo3@gmail.com" className="contacto-link">
-              <img className="contacto-icono" src="/gmail.svg" alt="Whatsapp" />
-              ejemplo3@gmail.com
+              posicionarenlinea@gmail.com
             </a>
           </div>
           {/* Fin contacto-item */}
