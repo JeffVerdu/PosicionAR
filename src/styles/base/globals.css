@@ -1,3 +1,7 @@
+html {
+  font-family: "Poppins", sans-serif;
+}
+
 .container-box {
   max-width: 1200px;
   width: 90%;
