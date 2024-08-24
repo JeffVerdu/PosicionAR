@@ -16,7 +16,28 @@ export const ContactoMedios = () => {
               />
               2622 24 9006
             </a>
-            <p className="contacto-nombre">Roberto Ferreyra</p>
+          </div>
+          {/* Fin contacto-item */}
+          <div className="contacto-item">
+            <a href="https://wa.me/5492622249006" className="contacto-link">
+              <img
+                className="contacto-icono"
+                src="/whatsapp.svg"
+                alt="Whatsapp"
+              />
+              11 7165 7648
+            </a>
+          </div>
+          {/* Fin contacto-item */}
+          <div className="contacto-item">
+            <a href="https://wa.me/5492622249006" className="contacto-link">
+              <img
+                className="contacto-icono"
+                src="/whatsapp.svg"
+                alt="Whatsapp"
+              />
+              11 3620 3923
+            </a>
           </div>
           {/* Fin contacto-item */}
         </div>
@@ -43,7 +64,10 @@ export const ContactoMedios = () => {
         <h3 className="contacto-title">Redes Sociales</h3>
         <div className="contacto-items">
           <div className="contacto-item-red">
-            <a href="https://www.facebook.com" className="contacto-link">
+            <a
+              href="https://www.facebook.com/profile.php?id=61565060994612"
+              className="contacto-link"
+            >
               <img
                 className="contacto-icono"
                 src="/facebook.svg"
@@ -54,7 +78,10 @@ export const ContactoMedios = () => {
           </div>
           {/* Fin contacto-item */}
           <div className="contacto-item-red">
-            <a href="https://www.instagram.com" className="contacto-link">
+            <a
+              href="https://www.instagram.com/enlineaposicionar"
+              className="contacto-link"
+            >
               <img
                 className="contacto-icono"
                 src="/instagram.svg"
