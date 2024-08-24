@@ -8,18 +8,7 @@ export const ContactoMedios = () => {
 
         <div className="contacto-items">
           <div className="contacto-item">
-            <a href="https://wa.me/5492622249006" className="contacto-link">
-              <img
-                className="contacto-icono"
-                src="/whatsapp.svg"
-                alt="Whatsapp"
-              />
-              2622 24 9006
-            </a>
-          </div>
-          {/* Fin contacto-item */}
-          <div className="contacto-item">
-            <a href="https://wa.me/5492622249006" className="contacto-link">
+            <a href="https://wa.me/541171657648" className="contacto-link">
               <img
                 className="contacto-icono"
                 src="/whatsapp.svg"
@@ -30,7 +19,7 @@ export const ContactoMedios = () => {
           </div>
           {/* Fin contacto-item */}
           <div className="contacto-item">
-            <a href="https://wa.me/5492622249006" className="contacto-link">
+            <a href="https://wa.me/541136203923" className="contacto-link">
               <img
                 className="contacto-icono"
                 src="/whatsapp.svg"
@@ -67,13 +56,14 @@ export const ContactoMedios = () => {
             <a
               href="https://www.facebook.com/profile.php?id=61565060994612"
               className="contacto-link"
+              target="_blank"
             >
               <img
                 className="contacto-icono"
                 src="/facebook.svg"
                 alt="Whatsapp"
               />
-              Facebook
+              Facebook - Posicionar EnLinea
             </a>
           </div>
           {/* Fin contacto-item */}
@@ -81,13 +71,14 @@ export const ContactoMedios = () => {
             <a
               href="https://www.instagram.com/enlineaposicionar"
               className="contacto-link"
+              target="_blank"
             >
               <img
                 className="contacto-icono"
                 src="/instagram.svg"
                 alt="Whatsapp"
               />
-              Instagram
+              Instagram - Posicionar EnLinea
             </a>
           </div>
           {/* Fin contacto-item */}
