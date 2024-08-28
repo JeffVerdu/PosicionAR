@@ -54,7 +54,7 @@ export const ContactoMedios = () => {
         <div className="contacto-items">
           <div className="contacto-item-red">
             <a
-              href="https://www.facebook.com/people/Posicionar-En-Línea/61565029495978/"
+              href="https://www.facebook.com/profile.php?id=61564892617268"
               className="contacto-link"
               target="_blank"
             >
