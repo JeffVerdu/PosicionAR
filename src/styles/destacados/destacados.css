@@ -3,7 +3,7 @@
 .destacados {
   background: linear-gradient(
     180deg,
-    rgba(0, 51, 102, 1) 50%,
+    rgba(0, 51, 102, 1),
     rgba(255, 255, 255, 1)
   );
   position: relative;
