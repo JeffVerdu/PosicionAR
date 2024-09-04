@@ -54,14 +54,14 @@ export const ContactoMedios = () => {
         <div className="contacto-items">
           <div className="contacto-item-red">
             <a
-              href="https://www.facebook.com/profile.php?id=61564892617268"
+              href="https://www.facebook.com/profile.php?id=61564581646713"
               className="contacto-link"
               target="_blank"
             >
               <img
                 className="contacto-icono"
                 src="/facebook.svg"
-                alt="Whatsapp"
+                alt="Facebook"
               />
               Facebook - Posicionar EnLinea
             </a>
