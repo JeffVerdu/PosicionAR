@@ -14,7 +14,7 @@ export const ContactoMedios = () => {
                 src="/whatsapp.svg"
                 alt="Whatsapp"
               />
-              2634 90 5111
+              263 490 5111
             </a>
           </div>
           {/* Fin contacto-item */}
