@@ -33,9 +33,11 @@ export const EditarAnuncio = () => {
   const [error, setError] = useState<string>("");
   const posterInputRef = useRef<HTMLInputElement | null>(null);
   const imagesInputRef = useRef<HTMLInputElement | null>(null);
+  const [existingFiles, setExistingFiles] = useState<string[]>([]);
+  const [filesToDelete, setFilesToDelete] = useState<string[]>([]);
+  const [posterToDelete, setPosterToDelete] = useState<string | null>(null);
 
   useEffect(() => {
-    console.log(articuloId);
     const cargarDatos = async () => {
       try {
         const anuncioData = await obtenerAnuncioPorId(articuloId!);
@@ -59,24 +61,68 @@ export const EditarAnuncio = () => {
     }
   }, [articuloId, setValue]);
 
+  useEffect(() => {
+    if (anuncio) {
+      if (anuncio.images) {
+        setExistingFiles(anuncio.images); // Cargar los archivos existentes
+      }
+    }
+  }, [anuncio]);
+
+  const handleRemoveExistingPoster = () => {
+    setPosterToDelete(anuncio?.poster || null); // Guardar la portada para eliminarla luego
+    setAnuncio((prev) => (prev ? { ...prev, poster: "" } : null)); // Remover la portada del estado actual del anuncio
+  };
+
+  const handleRemoveExistingFile = (index: number) => {
+    const updatedFiles = existingFiles.filter((_, i) => i !== index);
+    const removedFile = existingFiles[index];
+
+    setExistingFiles(updatedFiles); // Actualizar los archivos visualmente
+    setFilesToDelete((prev) => [...prev, removedFile]); // Guardar los archivos que serán eliminados
+
+    // Actualizar el estado del anuncio para reflejar el cambio visualmente
+    setAnuncio((prev) => (prev ? { ...prev, images: updatedFiles } : null));
+  };
+
   const onSubmit = async (data: Anuncio_Tipo) => {
     try {
       let updatedData: Partial<Anuncio_Tipo> = { ...data };
 
+      // Si se seleccionó una nueva portada, subirla
       if (posterFile) {
         const posterUrl = await uploadImage(posterFile);
         if (posterUrl) {
           updatedData.poster = posterUrl;
         }
+      } else if (posterToDelete) {
+        // Si se eliminó la portada actual, establecerla como nula
+        updatedData.poster = undefined;
       }
 
+      // Subir nuevas imágenes y videos si se seleccionan
+      let newFilesUrls: string[] = [];
       if (imagesFiles.length > 0) {
-        const imagesUrls = await Promise.all(
-          imagesFiles.map(async (file) => await uploadImage(file))
-        );
-        updatedData.images = imagesUrls.filter(
-          (url): url is string => url !== null
-        );
+        newFilesUrls = (
+          await Promise.all(
+            imagesFiles.map(async (file) => await uploadImage(file))
+          )
+        ).filter((url): url is string => url !== null);
+      }
+
+      // Combinar archivos existentes y nuevos
+      updatedData.images = [...existingFiles, ...newFilesUrls];
+
+      // Si hay archivos a eliminar, actualiza el estado de la base de datos si es necesario
+      if (filesToDelete.length > 0) {
+        // Lógica para eliminar los archivos de la base de datos o almacenamiento
+        // Ejemplo: await eliminarArchivos(filesToDelete);
+      }
+
+      // Lógica para eliminar la portada del almacenamiento si se eliminó
+      if (posterToDelete) {
+        // Lógica para eliminar la portada del almacenamiento
+        // Ejemplo: await eliminarArchivo(posterToDelete);
       }
 
       updatedData.destacado = data.destacado === "true";
@@ -130,6 +176,27 @@ export const EditarAnuncio = () => {
 
       return updatedFiles;
     });
+  };
+
+  const getMimeType = (fileUrl: string) => {
+    const fileName = fileUrl.split("?")[0];
+
+    if (fileName.endsWith(".mp4")) return "video/mp4";
+    if (fileName.endsWith(".webm")) return "video/webm";
+    if (fileName.endsWith(".ogg")) return "video/ogg";
+    if (fileName.endsWith(".mov")) return "video/quicktime";
+    if (fileName.endsWith(".m4v")) return "video/x-m4v";
+    if (fileName.endsWith(".3gp")) return "video/3gpp";
+    return "video/mp4"; // Fallback a video/mp4 por defecto si no hay coincidencia
+  };
+
+  // Función para determinar si es un video
+  const isVideo = (file: string) => {
+    // Dividir la URL por el símbolo "?" para ignorar los parámetros de consulta
+    const fileName = file.split("?")[0];
+
+    // Comprobar si la URL (sin parámetros) tiene una extensión de video
+    return /\.(mp4|webm|ogg|mov|m4v|3gp)$/i.test(fileName);
   };
 
   if (isLoading) {
@@ -293,14 +360,33 @@ export const EditarAnuncio = () => {
 
             <div>
               <label htmlFor="poster">Portada del Anuncio</label>
+              {anuncio?.poster && !posterFile && (
+                <div className="file-list">
+                  <img
+                    className="media-item"
+                    src={anuncio.poster}
+                    alt="Portada actual del anuncio"
+                    style={{
+                      maxWidth: "150px",
+                      maxHeight: "150px",
+                      objectFit: "cover",
+                    }}
+                  />
+                  <button type="button" onClick={handleRemoveExistingPoster}>
+                    Eliminar Portada
+                  </button>
+                </div>
+              )}
+
               <Controller
                 control={control}
                 name="poster"
-                {...{ required: "La portada es requerida" }}
+                rules={{
+                  required: !anuncio?.poster && "La portada es requerida",
+                }}
                 render={({ field }) => (
                   <>
                     <input
-                      required
                       type="file"
                       accept="image/*"
                       ref={posterInputRef}
@@ -315,7 +401,7 @@ export const EditarAnuncio = () => {
                           <span className="file-item">{posterFile.name}</span>
                         )}
                         <button type="button" onClick={handleRemovePoster}>
-                          Eliminar
+                          Eliminar Portada
                         </button>
                       </div>
                     )}
@@ -327,17 +413,20 @@ export const EditarAnuncio = () => {
               )}
             </div>
             <div>
-              <label htmlFor="images">Fotos del Anuncio</label>
+              <label htmlFor="images">Fotos o videos del Anuncio</label>
               <Controller
                 control={control}
                 name="images"
-                {...{ required: "Al menos una foto es requerida" }}
+                rules={{
+                  required:
+                    !(anuncio?.images?.length ?? 0) &&
+                    "Al menos una imagen es requerida",
+                }}
                 render={({ field }) => (
                   <>
                     <input
-                      required
                       type="file"
-                      accept="image/*"
+                      accept="image/*,video/*"
                       ref={imagesInputRef}
                       multiple
                       onChange={(e) => {
@@ -367,6 +456,33 @@ export const EditarAnuncio = () => {
               />
               {errors.images && (
                 <span className="error">{errors.images.message}</span>
+              )}
+
+              {(anuncio?.images ?? []).length > 0 && (
+                <div className="fileList-container">
+                  {anuncio?.images?.map((fileUrl, index) => (
+                    <div key={index} className="file-list">
+                      {isVideo(fileUrl) ? (
+                        <video className="media-item" controls>
+                          <source src={fileUrl} type={getMimeType(fileUrl)} />
+                          Tu navegador no soporta la reproducción de videos.
+                        </video>
+                      ) : (
+                        <img
+                          className="media-item"
+                          src={fileUrl}
+                          alt={`media-${index}`}
+                        />
+                      )}
+                      <button
+                        type="button"
+                        onClick={() => handleRemoveExistingFile(index)}
+                      >
+                        Eliminar
+                      </button>
+                    </div>
+                  ))}
+                </div>
               )}
             </div>
           </div>

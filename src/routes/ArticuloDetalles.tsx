@@ -30,9 +30,9 @@ export const ArticuloDetalles = () => {
 
         if (articuloObtenido) {
           const todasImagenes = [
-            articuloObtenido.poster,
+            articuloObtenido.poster, // Verifica que no sea nulo
             ...(articuloObtenido.images ?? []),
-          ];
+          ].filter(Boolean); // Esto eliminará cualquier valor "falso" como null o undefined
           setImagenes(todasImagenes);
           setArticulo(articuloObtenido);
         }
@@ -61,7 +61,11 @@ export const ArticuloDetalles = () => {
         {articulo ? (
           <div className="articuloDetalles-grid">
             <div className="articuloDetalles-carousel">
-              <ImagesCarousel images={imagenes} />
+              {imagenes.length > 0 ? (
+                <ImagesCarousel media={imagenes} />
+              ) : (
+                <p>No hay imágenes ni videos disponibles.</p>
+              )}
             </div>
             <div className="anunciante-contacto">
               <div className="articuloDetalles-text">
@@ -73,7 +77,10 @@ export const ArticuloDetalles = () => {
                   Precio: ${articulo.price}
                 </p>
                 <p className="articuloDetalles-fecha">
-                  Fecha de publicación: {articulo.date.toLocaleDateString()}
+                  Fecha de publicación:{" "}
+                  {articulo.date
+                    ? articulo.date.toLocaleDateString()
+                    : "No disponible"}
                 </p>
               </div>
               <div className="articuloDetalles-contacto">

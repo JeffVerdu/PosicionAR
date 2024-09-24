@@ -146,3 +146,23 @@
 .fileList-container {
   margin-top: 1rem;
 }
+
+.file-list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.media-item {
+  max-width: 150px;
+  max-height: 150px;
+  object-fit: cover;
+}
+
+.file-list button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}

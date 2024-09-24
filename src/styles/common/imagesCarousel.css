@@ -4,3 +4,9 @@
   max-height: 30rem;
   object-fit: contain;
 }
+
+.carousel-media {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}

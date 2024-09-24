@@ -342,7 +342,7 @@ export const CrearAnuncio = () => {
                     <input
                       required
                       type="file"
-                      accept="image/*"
+                      accept="image/*,video/*"
                       ref={imagesInputRef}
                       multiple
                       onChange={(e) => {
