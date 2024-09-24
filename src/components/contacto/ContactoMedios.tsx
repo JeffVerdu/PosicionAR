@@ -8,13 +8,13 @@ export const ContactoMedios = () => {
 
         <div className="contacto-items">
           <div className="contacto-item">
-            <a href="https://wa.me/5492634905111" className="contacto-link">
+            <a href="https://wa.me/5492614195970" className="contacto-link">
               <img
                 className="contacto-icono"
                 src="/whatsapp.svg"
                 alt="Whatsapp"
               />
-              263 490 5111
+              261 419 5970
             </a>
           </div>
           {/* Fin contacto-item */}
